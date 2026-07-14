@@ -1,0 +1,589 @@
+recreate the entire website pages add css to a single file make it mobile responsive and create an image gallery on both the index page and gallery page, make the ui look like a travel website
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f2ea;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+h1 {
+    text-align: center;
+    background-color: #1a2e35;
+    color: #d4af37;
+    padding: 30px 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #23434f;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #f5f2ea;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d4af37;
+    color: #1a2e35;
+}
+
+/* ===== SECTION TITLE ===== */
+h2 {
+    text-align: center;
+    color: #23434f;
+    margin: 40px auto 10px;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 10px auto 0;
+}
+
+/* ===== CARD CONTAINER (RESPONSIVE GRID) ===== */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ===== ALL CARDS ===== */
+.card,
+.card2,
+.card3,
+.card4,
+.card5 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== IMAGE FIT — key part ===== */
+.card img,
+.card2 img,
+.card3 img,
+.card4 img,
+.card5 img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    background-color: #e0ddd3; /* shows as a placeholder block if image src is empty/broken */
+}
+
+/* ===== TEXT INSIDE CARDS ===== */
+.card h3,
+.card2 h3,
+.card3 h3,
+.card4 h3,
+.card5 h3 {
+    padding: 15px 20px 5px;
+    color: #1a2e35;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    order: -1; /* pushes heading above image regardless of HTML order */
+}
+
+.card p,
+.card2 p,
+.card3 p,
+.card4 p,
+.card5 p {
+    padding: 10px 20px 0;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card p:last-of-type,
+.card2 p:last-of-type,
+.card3 p:last-of-type,
+.card4 p:last-of-type,
+.card5 p:last-of-type {
+    padding-bottom: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.card button,
+.card2 button,
+.card3 button,
+.card4 button,
+.card5 button {
+    margin: 10px 20px 20px;
+    background-color: #1a2e35;
+    color: #d4af37;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover,
+.card2 button:hover,
+.card3 button:hover,
+.card4 button:hover,
+.card5 button:hover {
+    background-color: #d4af37;
+    color: #1a2e35;
+}
+
+.card button:active,
+.card2 button:active,
+.card3 button:active,
+.card4 button:active,
+.card5 button:active {
+    transform: scale(0.97);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img,
+    .card2 img,
+    .card3 img,
+    .card4 img,
+    .card5 img {
+        height: 200px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f2ea;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #23434f;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #f5f2ea;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d4af37;
+    color: #1a2e35;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    background-color: #1a2e35;
+    padding: 30px 20px;
+}
+
+header h1 {
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+/* ===== TEXT SECTIONS ===== */
+h2 {
+    text-align: center;
+    color: #23434f;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin: 30px auto 10px;
+    padding: 0 20px;
+    text-transform: capitalize;
+}
+
+h3 {
+    text-align: center;
+    color: #23434f;
+    margin: 20px auto 10px;
+    padding: 0 20px;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+}
+
+h4 {
+    color: #23434f;
+    text-transform: capitalize;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #444;
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+}
+
+/* ===== POPULAR DESTINATIONS HEADING ===== */
+.container > h4,
+h4 + .container {
+    text-align: center;
+}
+
+/* ===== CARD CONTAINER (RESPONSIVE GRID) ===== */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ===== CARDS (covers .card, .card2, .card3) ===== */
+.card,
+.card2,
+.card3 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card2:hover,
+.card3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h4,
+.card2 h4,
+.card3 h4 {
+    padding: 15px 20px 0;
+    color: #1a2e35;
+    font-size: 1.2rem;
+}
+
+/* ===== IMAGE FIT — the key part ===== */
+.card img,
+.card2 img,
+.card3 img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-top: 12px;
+}
+
+.card p,
+.card2 p,
+.card3 p {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+/* ===== BUTTON ===== */
+button {
+    display: block;
+    margin: 20px auto 40px;
+    background-color: #1a2e35;
+    color: #d4af37;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #d4af37;
+    color: #1a2e35;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1a2e35;
+    color: #f5f2ea;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    max-width: 100%;
+    padding: 5px 0;
+    color: #f5f2ea;
+    font-size: 0.95rem;
+}
+
+footer p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img,
+    .card2 img,
+    .card3 img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        letter-spacing: 1px;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f2ea;
+    color: #2c2c2c;
+    padding-bottom: 60px;
+}
+
+h1 {
+    text-align: center;
+    background-color: #1a2e35;
+    color: #d4af37;
+    padding: 30px 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #23434f;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #f5f2ea;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d4af37;
+    color: #1a2e35;
+}
+
+.title {
+    text-align: center;
+    color: #23434f;
+    margin: 40px 0 20px 0;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 10px auto 0;
+}
+
+/* ===== FORM STYLING ===== */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d3cfc2;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #2c2c2c;
+    background-color: #f9f7f1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    background-color: #ffffff;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form select {
+    cursor: pointer;
+}
+
+form button {
+    background-color: #1a2e35;
+    color: #d4af37;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #d4af37;
+    color: #1a2e35;
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.6rem;
+        padding: 20px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        margin: 0 20px;
+        padding: 25px 20px;
+    }
+}

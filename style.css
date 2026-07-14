@@ -1,0 +1,402 @@
+/* ===========================
+   TECKLA LUXURY TRAVEL AGENCY
+   STYLE.CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f9fc;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+
+nav{
+    background:#0088cc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    text-transform:capitalize;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* ---------------- HEADINGS ---------------- */
+
+header{
+    background:url("images/pexels-highervibration-14462174.jpg") center/cover;
+    height:65vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+header h1{
+    color:white;
+    font-size:3rem;
+    background:rgba(0,0,0,.5);
+    padding:20px;
+    border-radius:10px;
+}
+
+h1{
+    text-align:center;
+    color:#0088cc;
+    margin-top:20px;
+}
+
+h2{
+    text-align:center;
+    margin:30px 0 20px;
+    color:#004d66;
+}
+
+h3,h4{
+    color:#0088cc;
+    margin-bottom:10px;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+/* ---------------- CONTAINER ---------------- */
+
+.container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:20px 0;
+}
+
+/* ---------------- CARDS ---------------- */
+
+.card,
+.card2,
+.card3,
+.card4,
+.card5{
+
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    transition:.4s;
+    padding:15px;
+}
+
+.card:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover{
+
+    transform:translateY(-10px);
+}
+
+.card img,
+.card2 img,
+.card3 img,
+.card4 img,
+.card5 img{
+
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+button{
+
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    margin-top:10px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#0088cc;
+}
+
+/* ---------------- TABLE ---------------- */
+
+table{
+
+    width:95%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+th{
+
+    background:#0088cc;
+    color:white;
+    padding:15px;
+}
+
+td{
+
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tr:nth-child(even){
+
+    background:#f3f3f3;
+}
+
+tr:hover{
+
+    background:#e6f7ff;
+}
+
+/* ---------------- GALLERY ---------------- */
+
+.gallery{
+
+    width:90%;
+    margin:40px auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.gallery div{
+
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.gallery div:hover{
+
+    transform:scale(1.04);
+}
+
+.gallery img{
+
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.gallery p{
+
+    padding:15px;
+    text-align:center;
+}
+
+/* ---------------- FORM ---------------- */
+
+form{
+
+    width:90%;
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+
+    resize:none;
+    height:150px;
+}
+
+form button{
+
+    width:100%;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+
+    margin-top:50px;
+    background:#004d66;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer p{
+
+    margin:10px 0;
+}
+
+/* ---------------- IMAGE GALLERY FOR HOME PAGE ---------------- */
+
+.home-gallery{
+
+    width:90%;
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.home-gallery img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.home-gallery img:hover{
+
+    transform:scale(1.05);
+}
+
+/* ---------------- WELCOME SECTION ---------------- */
+
+.intro{
+
+    width:90%;
+    margin:auto;
+    text-align:center;
+    padding:30px;
+}
+
+.intro p{
+
+    max-width:900px;
+    margin:auto;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:768px){
+
+header{
+
+height:45vh;
+
+}
+
+header h1{
+
+font-size:2rem;
+
+padding:15px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.home-gallery{
+
+grid-template-columns:1fr;
+
+}
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+header h1{
+
+font-size:1.5rem;
+
+}
+
+h2{
+
+font-size:22px;
+
+}
+
+}
